@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Journaling Website</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1>Journal</h1>
+            </header>
+
+        </div>
+
+        <div class="main-wrapper">
+            <main>
+                <section class="entry-form">
+                    <h2>New Entry</h2>
+                    <form id="journalForm">
+                        <input type="hidden" id="entryId">
+                        <label for="title">Title</label>
+                        <input id="title" name="title" type="text" placeholder="Title" required maxlength="100">
+
+                        <label for="content">Content</label>
+                        <textarea id="content" name="content" rows="6" placeholder="Write your thoughts..." required maxlength="5000"></textarea>
+
+                        <div class="form-actions">
+                            <button type="submit" id="saveBtn">Post</button>
+                            <button type="button" id="cancelEdit" class="secondary hidden">Cancel Edit</button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="entries">
+                    <div class="entries-header">
+                        <h2>Your Entries</h2>
+                        <button id="deleteAllBtn" class="danger" type="button">Delete All</button>
+                    </div>
+                    <div id="entriesList" class="entries-list">
+                        <!-- Entries should go here -->
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
